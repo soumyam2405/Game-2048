@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Game2048 from './Game-2048/Game-2048';
+import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from 'react-bootstrap/Alert';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container>
+        <Game2048 />
+        <Alert variant="danger">
+          <Alert.Heading>Notice!</Alert.Heading>
+          <p>This is in beta testing, beware of the bugs!</p>
+        </Alert>
+      </Container>
     </div>
   );
 }
